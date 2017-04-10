@@ -10,10 +10,7 @@ public class Department {
     private int id;
     private String address;
 
-    public Department(int id, String address) {
-        this.id = id;
-        this.address = address;
-    }
+
 
     public int getId() {
         return id;

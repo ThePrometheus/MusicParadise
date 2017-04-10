@@ -4,16 +4,18 @@ package components;
  * Created by nazar on 10.04.17.
  */
 public class Instrument {
-    public Instrument(int id, String model, String category, String trademark, int company_index, String purchase_date, String sell_date, boolean functioning) {
-        this.id = id;
-        this.model = model;
-        this.category = category;
-        this.trademark = trademark;
-        this.company_index = company_index;
-        this.purchase_date = purchase_date;
-        this.sell_date = sell_date;
-        this.functioning = functioning;
+
+    public int getDepartment_id() {
+        return department_id;
     }
+
+    public void setDepartment_id(int department_id) {
+        this.department_id = department_id;
+    }
+
+    private  int department_id;
+
+
 
     public int getId() {
         return id;
