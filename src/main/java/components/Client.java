@@ -4,17 +4,6 @@ package components;
  * Created by nazar on 10.04.17.
  */
 public class Client implements User {
-    public Client(int id, String surname, String firstname, String middlename, String login, String password, String tel_number, String address, String email) {
-        this.id = id;
-        this.surname = surname;
-        this.firstname = firstname;
-        this.middlename = middlename;
-        this.login = login;
-        this.password = password;
-        this.tel_number = tel_number;
-        this.address = address;
-        this.email = email;
-    }
 
     public void setId(int id) {
         this.id = id;
