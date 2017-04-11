@@ -17,21 +17,10 @@ import java.security.Principal;
  * Created by nazar on 11.04.17.
  */
 @Controller
-@RequestMapping(value= "/", headers="Accept=*/*")
 public class HomeController {
-    private static  final String HOME ="home";
-    private static Logger logger = LoggerFactory.getLogger(HomeController.class.getSimpleName());
-
-@RequestMapping(method=RequestMethod.GET)
-    public ModelAndView render(){
-    ModelAndView mv = new ModelAndView("home");
-    return mv;
-
-}
-
-
-
-
-
+    @RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.POST})
+    public String home(){
+        return "redirect:/instruments/all";
+    }
 
 }

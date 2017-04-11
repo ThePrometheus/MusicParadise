@@ -2,6 +2,7 @@ package services.impl;
 
 import components.Client;
 import dao.ClientDAO;
+import dao.UserDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,12 @@ import services.ClientService;
 public class ClientServiceImpl  implements ClientService{
     @Autowired
     private ClientDAO clientDao;
+
+    @Autowired
+    private UserDAO userDAO;
+
+
+
     private static Logger logger = LoggerFactory.getLogger(ClientServiceImpl.class.getSimpleName());
 
     public Client get(int id) {
@@ -22,6 +29,7 @@ public class ClientServiceImpl  implements ClientService{
 
     public int insert(Client client) {
         logger.info("Insert client");
+
         return clientDao.insert(client);
     }
 

@@ -1,5 +1,6 @@
 package services.impl;
 
+import components.Client;
 import components.Order;
 import dao.InstrumentDAO;
 import dao.OrderDAO;
@@ -7,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import services.OrderService;
+
+import java.util.List;
 
 /**
  * Created by nazar on 11.04.17.
@@ -37,5 +40,10 @@ public class OrderServiceImpl implements OrderService {
         logger.info("Instrument is removed");
         orderDAO.delete(order);
 
+    }
+
+    public List<Order> getAllForClient(Client client) {
+        logger.info("Get all orders of that client");
+        return  orderDAO.getAllForClient(client);
     }
 }

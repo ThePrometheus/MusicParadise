@@ -50,6 +50,12 @@ public class App extends  WebMvcConfigurerAdapter
 
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
       //  super.addResourceHandlers(registry);
+
+        registry.addResourceHandler("/src/main/webapp/views/**").addResourceLocations("/src/main/webapp/views/");
+        registry.addResourceHandler("/src/main/webapp/js/**").addResourceLocations("/src/main/webapp/js/");
+        registry.addResourceHandler("/src/main/webapp/css/**").addResourceLocations("/src/main/webapp/css/");
+        registry.addResourceHandler("/fonts/**").addResourceLocations("/fonts/");
+        registry.addResourceHandler("/pics/**").addResourceLocations("/pics/");
     }
 
     @Override

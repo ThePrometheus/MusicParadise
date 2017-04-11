@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import services.InstrumentService;
 
+import java.util.List;
+
 /**
  * Created by nazar on 11.04.17.
  */
@@ -35,5 +37,10 @@ public class InstrumentServiceImpl implements InstrumentService {
         logger.info("Instrument is removed");
         instrumentDAO.delete(instrument);
 
+    }
+
+    public List<Instrument> getAll() {
+        logger.info("All instrument are returned");
+     return    instrumentDAO.getAll();
     }
 }

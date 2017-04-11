@@ -1,6 +1,7 @@
 package dao.DAOimplementation;
 
 import components.Instrument;
+import components.Order;
 import dao.InstrumentDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +11,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * Created by nazar on 11.04.17.
@@ -18,13 +20,20 @@ public class InstrumentDAOImpl implements InstrumentDAO {
     @Autowired
     private JdbcTemplate jdbcTemplate;
     private Logger logger = LoggerFactory.getLogger(InstrumentDAOImpl.class.getSimpleName());
+    private static final String GET_ALL = "SELECT * FROM instruments";
+
+
 
     private static final String  GET = "SELECT  * FROM instruments WHERE id=?";
     private static final String INSERT = "INSERT INTO instruments (model,category,trademark,company_index,purchase_date,sell_date,functioning,department,price,description) VALUES (?,?,?,?,?,?,?,?,?,?)";
     private static final String UPDATE = "UPDATE instruments SET model=?,category=?,trademark=?,company_index=?,purchase_date=?,sell_date=?,functioning=?,department,price,description WHERE  id=?";
     private static final String DELETE = "DELETE FROM instruments WHERE id=?";
+    private static final String GET_ALL_INSTRUMENTS_IN_ORDER = "SELECT * FROM instruments where id=(SELECT instrument_id FROM order_instruments WHERE order_id=?  ";
 
+public List<Instrument> getAllInstrumentsInOrder(Order order){
+  return      jdbcTemplate.query(GET_ALL_INSTRUMENTS_IN_ORDER,mapper,order.getId());
 
+}
 
     public Instrument get(int id) {
         logger.info("Instrument is  retrieved");
@@ -68,6 +77,12 @@ public class InstrumentDAOImpl implements InstrumentDAO {
         jdbcTemplate.update(DELETE,instrument.getId());
 
     }
+
+    public List<Instrument> getAll() {
+        logger.info("Alle instruments are returned");
+       return  jdbcTemplate.query(GET_ALL,mapper);
+    }
+
     private RowMapper<Instrument> mapper = new RowMapper<Instrument>(){
 
         public Instrument mapRow(ResultSet resultSet, int i) throws SQLException {
