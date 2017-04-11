@@ -27,15 +27,7 @@ public class Order {
     private int  client_id;
 
 
-    public String getOrder_date() {
-        return order_date;
-    }
-
-    public void setOrder_date(String order_date) {
-        this.order_date = order_date;
-    }
-
-    private String order_date;
+    private String order_time;
 
 
 
@@ -82,17 +74,39 @@ public class Order {
         this.shipped = shipped;
     }
 
-    public String getShip_date() {
-        return ship_date;
-    }
-
-    public void setShip_date(String ship_date) {
-        this.ship_date = ship_date;
-    }
 
     public String getComment() {
         return comment;
     }
+
+    public String getOrder_time() {
+        return order_time;
+    }
+
+    public void setOrder_time(String order_time) {
+        this.order_time = order_time;
+    }
+
+    public String getShip_time() {
+        return ship_time;
+    }
+
+    public void setShip_time(String ship_time) {
+        this.ship_time = ship_time;
+    }
+
+    private String ship_time;
+
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    private double price;
 
     public void setComment(String comment) {
         this.comment = comment;

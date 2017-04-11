@@ -4,6 +4,24 @@ package components;
  * Created by nazar on 10.04.17.
  */
 public class Instrument {
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    private double price;
+    private String description;
 
     public int getDepartment_id() {
         return department_id;

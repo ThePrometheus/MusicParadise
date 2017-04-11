@@ -20,8 +20,8 @@ public class InstrumentDAOImpl implements InstrumentDAO {
     private Logger logger = LoggerFactory.getLogger(InstrumentDAOImpl.class.getSimpleName());
 
     private static final String  GET = "SELECT  * FROM instruments WHERE id=?";
-    private static final String INSERT = "INSERT INTO instruments (model,category,trademark,company_index,purchase_date,sell_date,functioning,instruments_department_id) VALUES (?,?,?,?,?,?,?,?)";
-    private static final String UPDATE = "UPDATE instruments SET model=?,category=?,trademark=?,company_index=?,purchase_date=?,sell_date=?,functioning=?,instruments_department_id WHERE id=?";
+    private static final String INSERT = "INSERT INTO instruments (model,category,trademark,company_index,purchase_date,sell_date,functioning,department,price,description) VALUES (?,?,?,?,?,?,?,?,?,?)";
+    private static final String UPDATE = "UPDATE instruments SET model=?,category=?,trademark=?,company_index=?,purchase_date=?,sell_date=?,functioning=?,department,price,description WHERE  id=?";
     private static final String DELETE = "DELETE FROM instruments WHERE id=?";
 
 
@@ -37,11 +37,13 @@ public class InstrumentDAOImpl implements InstrumentDAO {
                 instrument.getModel(),
                 instrument.getCategory(),
                 instrument.getTrademark(),
-                instrument.getCategory(),
+                instrument.getCompany_index(),
                 instrument.getPurchase_date(),
                 instrument.getSell_date(),
                 instrument.isFunctioning(),
-                instrument.getDepartment_id());
+                instrument.getDepartment_id(),
+                 instrument.getPrice(),
+        instrument.getDescription());
     }
 
     public void update(Instrument instrument) {
@@ -50,11 +52,13 @@ public class InstrumentDAOImpl implements InstrumentDAO {
                 instrument.getModel(),
                 instrument.getCategory(),
                 instrument.getTrademark(),
-                instrument.getCategory(),
+                instrument.getCompany_index(),
                 instrument.getPurchase_date(),
                 instrument.getSell_date(),
                 instrument.isFunctioning(),
-                instrument.getDepartment_id());
+                instrument.getDepartment_id(),
+        instrument.getPrice(),
+        instrument.getDescription());
 
 
     }
@@ -76,7 +80,11 @@ public class InstrumentDAOImpl implements InstrumentDAO {
            instrument.setPurchase_date(resultSet.getString("purchase_date"));
            instrument.setSell_date(resultSet.getString("sell_date"));
            instrument.setFunctioning(resultSet.getBoolean("functioning"));
-           instrument.setDepartment_id(resultSet.getInt("department_id"));
+           instrument.setDepartment_id(resultSet.getInt("department"));
+
+           instrument.setPrice(resultSet.getDouble("price"));
+           instrument.setDescription(resultSet.getString("description"));
+
 
 
 

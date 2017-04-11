@@ -3,7 +3,7 @@ package components;
 /**
  * Created by nazar on 10.04.17.
  */
-public class Client implements User {
+public class Client  {
 
     public void setId(int id) {
         this.id = id;
@@ -23,7 +23,7 @@ public class Client implements User {
     }
 
     private String surname;
-
+private String middlename;
     public String getFirstname() {
         return firstname;
     }
@@ -42,27 +42,9 @@ public class Client implements User {
         this.middlename = middlename;
     }
 
-    public String getLogin() {
-        return login;
-    }
 
-    private String middlename;
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
 
-    private String login;
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    private String password;
 
     public String getTel_number() {
         return tel_number;
@@ -101,9 +83,7 @@ public class Client implements User {
                 "id=" + id +
                 ", surname='" + surname + '\'' +
                 ", firstname='" + firstname + '\'' +
-                ", middlename='" + middlename + '\'' +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
+
                 ", tel_number='" + tel_number + '\'' +
                 ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
@@ -120,9 +100,7 @@ public class Client implements User {
         if (id != client.id) return false;
         if (surname != null ? !surname.equals(client.surname) : client.surname != null) return false;
         if (firstname != null ? !firstname.equals(client.firstname) : client.firstname != null) return false;
-        if (middlename != null ? !middlename.equals(client.middlename) : client.middlename != null) return false;
-        if (login != null ? !login.equals(client.login) : client.login != null) return false;
-        if (password != null ? !password.equals(client.password) : client.password != null) return false;
+
         if (tel_number != null ? !tel_number.equals(client.tel_number) : client.tel_number != null) return false;
         if (address != null ? !address.equals(client.address) : client.address != null) return false;
         return email != null ? email.equals(client.email) : client.email == null;
@@ -133,9 +111,7 @@ public class Client implements User {
         int result = id;
         result = 31 * result + (surname != null ? surname.hashCode() : 0);
         result = 31 * result + (firstname != null ? firstname.hashCode() : 0);
-        result = 31 * result + (middlename != null ? middlename.hashCode() : 0);
-        result = 31 * result + (login != null ? login.hashCode() : 0);
-        result = 31 * result + (password != null ? password.hashCode() : 0);
+
         result = 31 * result + (tel_number != null ? tel_number.hashCode() : 0);
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);

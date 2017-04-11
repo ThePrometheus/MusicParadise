@@ -12,8 +12,10 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -95,5 +97,12 @@ public class App extends  WebMvcConfigurerAdapter
         return new Md5PasswordEncoder();
     }
 
+    @Bean
+    public PlatformTransactionManager txManager(){
+        return new DataSourceTransactionManager(dataSource());
+    }
 
 }
+
+
+
