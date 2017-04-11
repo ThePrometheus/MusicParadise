@@ -26,18 +26,32 @@ public class UserDAOIMpl implements UserDAO {
 
 
     public User get(int id) {
-        return null;
+        return jdbcTemplate.queryForObject(GET,mapper,id);
     }
 
     public int insert(User user) {
-        return 0;
+        return jdbcTemplate.update(INSERT,
+               user.getId(),
+                user.getRole(),
+                user.getPassword(),
+                user.getLogin()
+        );
     }
 
     public void delete(User user) {
+        jdbcTemplate.update(DELETE,user.getId());
 
     }
 
     public void update(User user) {
+        jdbcTemplate.update(UPDATE,
+               user.getId(),
+                user.getLogin(),
+                user.getPassword(),
+                user.getRole()
+
+
+        );
 
     }
 

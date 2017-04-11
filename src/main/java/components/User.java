@@ -11,6 +11,10 @@ public class User {
         this.login = login;
     }
 
+    public String getLogin() {
+        return login;
+    }
+
     private String login ;
     private String password;
     private String role;
@@ -24,13 +28,6 @@ public class User {
         this.id = id;
     }
 
-    public int getLogin() {
-        return login;
-    }
-
-    public void setLogin(int login) {
-        this.login = login;
-    }
 
     public String getPassword() {
         return password;
