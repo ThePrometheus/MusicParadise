@@ -2,6 +2,7 @@ package services;
 
 import components.Client;
 import components.Order;
+import pojo.ClientOrder;
 
 import java.util.List;
 
@@ -14,4 +15,5 @@ public interface OrderService {
     void update(Order order);
     void remove(Order order );
     List<Order> getAllForClient(Client client );
+    ClientOrder getClientOrderById(int id);
 }

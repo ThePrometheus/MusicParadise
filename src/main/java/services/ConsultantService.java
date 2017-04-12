@@ -7,6 +7,7 @@ import components.Consultant;
  */
 public interface ConsultantService {
     Consultant get(String login );
+    Consultant getById( int id );
     int insert(Consultant consultant);
     void update(Consultant consultant );
     void remove(Consultant consultant );

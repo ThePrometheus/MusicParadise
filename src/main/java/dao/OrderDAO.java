@@ -3,6 +3,7 @@ package dao;
 import components.Client;
 import components.Consultant;
 import components.Order;
+import pojo.ClientOrder;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ public interface OrderDAO {
     List<Order> getAllForClient(Client client);
      void executeOrder(Order order);
      List<Order> getAllOrdersForConsultant(Consultant consultant);
+       ClientOrder getClientOrderById(int id);
 
 
 }

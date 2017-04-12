@@ -28,6 +28,7 @@ public class Client  {
     }
 
     private String role;
+    public Client(){}
 
     public Client(String login,  String surname, String middlename, String firstname, String tel_number, String address, String email) {
         this.login = login;

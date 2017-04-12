@@ -30,6 +30,10 @@ public class ConsultantServiceImpl implements ConsultantService {
         consultantDAO.update(consultant);
 
     }
+    public Consultant getById(int id){
+     return    consultantDAO.getById(id);
+
+    }
 
     public void remove(Consultant consultant) {
         logger.info("Consultant is removed");

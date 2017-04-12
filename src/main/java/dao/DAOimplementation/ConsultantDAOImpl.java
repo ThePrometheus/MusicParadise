@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.objenesis.instantiator.basic.FailingInstantiator;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,6 +26,7 @@ public class ConsultantDAOImpl implements ConsultantDAO {
     private static final String INSERT = "INSERT INTO consultants (login,surname,firstname,middlename,birth_date,tel_number,salary,department) VALUES (?,?,?,?,?,?,?,?)";
     private static final String UPDATE = "UPDATE consultants SET surname=?,firstname=?,middlename=?,birth_date=?,tel_number=?,salary=?,department=? WHERE login=?";
     private static final String DELETE = "DELETE FROM consultants WHERE login=?";
+    private static final  String GET_BY_ID = "SELECT  * FROTM consultants WHERE id=?";
 
     public Consultant get(String login ) {
         logger.info("Conslutant retrieved");
@@ -65,6 +67,9 @@ public class ConsultantDAOImpl implements ConsultantDAO {
         logger.info("Consultant is  deleted");
         jdbcTemplate.update(DELETE, consultant.getId());
 
+    }
+    public Consultant getById(int id){
+      return   jdbcTemplate.queryForObject(GET_BY_ID,mapper,id);
     }
 
 

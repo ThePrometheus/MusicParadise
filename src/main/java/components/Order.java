@@ -5,9 +5,19 @@ package components;
  */
 public class Order {
     private int id;
+    private String client;
+
 
     public int getConsultant_id() {
         return consultant_id;
+    }
+
+    public String getClient() {
+        return client;
+    }
+
+    public void setClient(String client) {
+        this.client = client;
     }
 
     public void setConsultant_id(int consultant_id) {

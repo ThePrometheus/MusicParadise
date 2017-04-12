@@ -7,6 +7,7 @@ import dao.OrderDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import pojo.ClientOrder;
 import services.OrderService;
 
 import java.util.List;
@@ -45,5 +46,9 @@ public class OrderServiceImpl implements OrderService {
     public List<Order> getAllForClient(Client client) {
         logger.info("Get all orders of that client");
         return  orderDAO.getAllForClient(client);
+    }
+
+    public ClientOrder getClientOrderById(int id) {
+     return    orderDAO.getClientOrderById(id);
     }
 }

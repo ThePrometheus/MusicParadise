@@ -66,7 +66,7 @@ public class ClientDAOImpl implements ClientDAO {
     private RowMapper<Client> mapper = new RowMapper<Client>() {
         public Client mapRow(ResultSet resultSet, int i) throws SQLException {
             Client client = new Client();
-            client.setId(resultSet.getInt("id"));
+          //  client.setId(resultSet.getInt("id"));
             client.setLogin(resultSet.getString("login"));
             client.setSurname(resultSet.getString("surname"));
             client.setFirstname(resultSet.getString("firstname"));
