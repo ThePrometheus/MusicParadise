@@ -40,4 +40,7 @@ public class ConsultantServiceImpl implements ConsultantService {
         consultantDAO.delete(consultant);
 
     }
+  public   Consultant getConsultantByOrderId(int id){
+   return consultantDAO.getConsultantByOrderId(id);
+    }
 }

@@ -10,10 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import pojo.AjaxResponseBody;
 import pojo.ClientOrder;
-import services.ClientService;
-import services.DepartmentService;
-import services.OrderService;
-import services.UserService;
+import services.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
@@ -35,7 +32,7 @@ public class OrderController {
     private OrderService orderService;
 
     @Autowired
-    private ClientService consultantService;
+    private ConsultantService consultantService;
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public ModelAndView createOrder() {
@@ -58,22 +55,24 @@ public class OrderController {
 
     @RequestMapping(value = "/accept/{id}", method = RequestMethod.GET)
     public ModelAndView getReceipt(@PathVariable int id, Principal principal, HttpServletRequest request) {
-        ModelAndView mv = new ModelAndView("orderGeneralView");
+        ModelAndView mv = new ModelAndView("clientOrder");
 
           ClientOrder clientOrder = orderService.getClientOrderById(id);
         //  CarDriver carDriver = carDriverService.getByOrderId(id);
-        Consultant consultant = consultantService.getById(id);
+        Consultant consultant= consultantService.getByOrderId(id);
         System.out.println(clientOrder);
-        System.out.println(carDriver);
-        System.out.println(dispatcher);
+
+        System.out.println(consultant);
         if (!clientOrder.getClient().getLogin().equals(principal.getName())
-                && !carDriver.getDriver().getLogin().equals(principal.getName())
-                && !dispatcher.getLogin().equals(principal.getName())
+
+                && !consultant.getLogin().equals(principal.getName())
                 && !request.isUserInRole(ADMIN_ROLE))
             return new ModelAndView("403");
         mv.addObject("client_order", clientOrder);
-        mv.addObject("car_driver", carDriver);
-        mv.addObject("dispatcher", dispatcher);
+
+        mv.addObject("consultant", consultant);
         return mv;
     }
+
+
 }

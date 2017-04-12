@@ -4,6 +4,7 @@ package components;
  * Created by nazar on 10.04.17.
  */
 public class Order {
+    public Order(){}
     private int id;
     private String client;
 

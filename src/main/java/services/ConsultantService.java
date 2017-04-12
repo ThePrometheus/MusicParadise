@@ -11,5 +11,6 @@ public interface ConsultantService {
     int insert(Consultant consultant);
     void update(Consultant consultant );
     void remove(Consultant consultant );
+   Consultant getByOrderId(int id);
 
 }

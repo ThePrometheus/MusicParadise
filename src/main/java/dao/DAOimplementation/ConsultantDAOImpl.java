@@ -27,6 +27,7 @@ public class ConsultantDAOImpl implements ConsultantDAO {
     private static final String UPDATE = "UPDATE consultants SET surname=?,firstname=?,middlename=?,birth_date=?,tel_number=?,salary=?,department=? WHERE login=?";
     private static final String DELETE = "DELETE FROM consultants WHERE login=?";
     private static final  String GET_BY_ID = "SELECT  * FROTM consultants WHERE id=?";
+    private static final String GET_BY_ORDER_ID = "SELECT FROM consultant c WHERE c.login IN (SELECT o.consultant FROM orders o WHERE o.id=?) ";
 
     public Consultant get(String login ) {
         logger.info("Conslutant retrieved");
@@ -72,6 +73,10 @@ public class ConsultantDAOImpl implements ConsultantDAO {
       return   jdbcTemplate.queryForObject(GET_BY_ID,mapper,id);
     }
 
+    public Consultant getConsultantByOrderId(int id) {
+        List<Consultant> resp = jdbcTemplate.query(GET_BY_ORDER_ID, mapper, id);
+        return (resp.isEmpty())?null:resp.get(0);
+    }
 
 
     private RowMapper<Consultant> mapper = new RowMapper<Consultant>() {

@@ -3,18 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="546d8ec2-2a20-4fce-b3df-7ad96cbb2c0a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/components/Client.java" afterPath="$PROJECT_DIR$/src/main/java/components/Client.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/components/Consultant.java" afterPath="$PROJECT_DIR$/src/main/java/components/Consultant.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/components/Order.java" afterPath="$PROJECT_DIR$/src/main/java/components/Order.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/OrderController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/OrderController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/ConsultantDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/ConsultantDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/DAOimplementation/ClientDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/DAOimplementation/ClientDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/DAOimplementation/ConsultantDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/DAOimplementation/ConsultantDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/DAOimplementation/OrderDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/DAOimplementation/OrderDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/OrderDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/OrderDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/services/ConsultantService.java" afterPath="$PROJECT_DIR$/src/main/java/services/ConsultantService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/services/OrderService.java" afterPath="$PROJECT_DIR$/src/main/java/services/OrderService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/services/impl/ConsultantServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/services/impl/ConsultantServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/services/impl/OrderServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/services/impl/OrderServiceImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -295,19 +291,105 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConsultantDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/DAOimplementation/ConsultantDAOImpl.java">
+      <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state relative-caret-position="157">
+              <caret line="57" column="55" lean-forward="false" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clientOrder.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/clientOrder.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
               <folding>
-                <element signature="e#2585#2586#0" expanded="true" />
-                <element signature="e#2656#2657#0" expanded="true" />
-                <marker date="1491980157233" expanded="true" signature="785:825" ph="SELECT * FRO... consultants" />
-                <marker date="1491980157233" expanded="true" signature="870:995" ph="INSERT INTO consultants... " />
-                <marker date="1491980157233" expanded="true" signature="1040:1159" ph="UPDATE consu... " />
-                <marker date="1491980157233" expanded="true" signature="1204:1241" ph="DELETE FROM " />
-                <marker date="1491980157233" expanded="true" signature="1290:1328" ph="SELECT * FRO... " />
+                <element signature="e#325#345#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderInstrumentDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/OrderInstrumentDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientOrder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pojo/ClientOrder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#420#421#0" expanded="true" />
+                <element signature="e#456#457#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderInstrument.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pojo/OrderInstrument.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
+                <element signature="e#399#400#0" expanded="true" />
+                <element signature="e#440#441#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#548#549#0" expanded="true" />
+                <element signature="e#604#605#0" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderInstrumentDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/DAOimplementation/OrderInstrumentDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="40" column="99" lean-forward="false" selection-start-line="40" selection-start-column="99" selection-end-line="40" selection-end-column="99" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2426#4041#0" expanded="true" />
+                <element signature="e#4040#4041#0" expanded="true" />
+                <marker date="1491987120488" expanded="true" signature="783:881" ph="INSERT INTO order_instruments... " />
+                <marker date="1491987120488" expanded="true" signature="1271:1401" ph="SELECT * FRO... order_instruments" />
+                <marker date="1491987120488" expanded="true" signature="1459:1511" ph="SELECT * FRO... order_instruments" />
+                <marker date="1491987120488" expanded="true" signature="1574:1625" ph="SELECT * FRO... order_instruments" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InstrumentDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/DAOimplementation/InstrumentDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="100" column="73" lean-forward="false" selection-start-line="89" selection-start-column="10" selection-end-line="100" selection-end-column="73" />
+              <folding>
+                <marker date="1491945941240" expanded="true" signature="704:729" ph="SELECT * FRO... instruments" />
+                <marker date="1491945941240" expanded="true" signature="775:812" ph="SELECT * FRO... instruments" />
+                <marker date="1491945941240" expanded="true" signature="857:1010" ph="INSERT INTO instruments... " />
+                <marker date="1491945941240" expanded="true" signature="857:1015" ph="INSERT INTO instruments... " />
+                <marker date="1491945941240" expanded="true" signature="1060:1212" ph="UPDATE instr... " />
+                <marker date="1491945941240" expanded="true" signature="1257:1291" ph="DELETE FROM " />
+                <marker date="1491945941240" expanded="true" signature="1358:1454" ph="SELECT * FRO... instruments" />
               </folding>
             </state>
           </provider>
@@ -316,128 +398,46 @@
       <file leaf-file-name="OrderDAOImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/DAOimplementation/OrderDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="146" column="1" lean-forward="false" selection-start-line="146" selection-start-column="1" selection-end-line="146" selection-end-column="1" />
+            <state relative-caret-position="346">
+              <caret line="110" column="0" lean-forward="false" selection-start-line="102" selection-start-column="12" selection-end-line="110" selection-end-column="0" />
               <folding>
-                <element signature="e#4263#5457#0" expanded="true" />
-                <element signature="e#5456#5457#0" expanded="true" />
-                <marker date="1491981591189" expanded="true" signature="793:825" ph="SELECT * FRO... orders" />
-                <marker date="1491981591189" expanded="true" signature="870:974" ph="INSERT INTO orders... " />
-                <marker date="1491981591189" expanded="true" signature="1019:1122" ph="UPDATE order... " />
-                <marker date="1491981591189" expanded="true" signature="1167:1196" ph="DELETE FROM " />
-                <marker date="1491981591189" expanded="true" signature="1260:1286" ph="SELECT * FRO... ORDERS" />
-                <marker date="1491981591189" expanded="true" signature="1260:1295" ph="SELECT * FRO... orders" />
-                <marker date="1491981591189" expanded="true" signature="1260:1320" ph="SELECT * FRO... orders" />
-                <marker date="1491981591189" expanded="true" signature="1388:1452" ph="SELECT * FRO... orders" />
-                <marker date="1491981591189" expanded="true" signature="1513:1538" ph="SELECT * FRO... orders" />
-                <marker date="1491981591189" expanded="true" signature="1513:1596" ph="SELECT * FRO... orders" />
-                <marker date="1491981591189" expanded="true" signature="1825:1872" ph="UPDATE order... " />
+                <element signature="e#3473#4155#0" expanded="true" />
+                <element signature="e#4154#4155#0" expanded="true" />
+                <marker date="1491985257433" expanded="true" signature="793:825" ph="SELECT * FRO... orders" />
+                <marker date="1491985257433" expanded="true" signature="870:974" ph="INSERT INTO orders... " />
+                <marker date="1491985257433" expanded="true" signature="1019:1122" ph="UPDATE order... " />
+                <marker date="1491985257433" expanded="true" signature="1167:1196" ph="DELETE FROM " />
+                <marker date="1491985257433" expanded="true" signature="1260:1286" ph="SELECT * FRO... ORDERS" />
+                <marker date="1491985257433" expanded="true" signature="1260:1295" ph="SELECT * FRO... orders" />
+                <marker date="1491985257433" expanded="true" signature="1260:1320" ph="SELECT * FRO... orders" />
+                <marker date="1491985257433" expanded="true" signature="1388:1452" ph="SELECT * FRO... orders" />
+                <marker date="1491985257433" expanded="true" signature="1513:1538" ph="SELECT * FRO... orders" />
+                <marker date="1491985257433" expanded="true" signature="1513:1596" ph="SELECT * FRO... orders" />
+                <marker date="1491985257433" expanded="true" signature="1825:1872" ph="UPDATE order... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/OrderController.java">
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/components/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="62" column="33" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+            <state relative-caret-position="-1449">
+              <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+              <folding>
+                <element signature="e#256#257#0" expanded="true" />
+                <element signature="e#285#286#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clientOrders.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/clientOrders.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/components/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/OrderService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/impl/OrderServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1278#1279#0" expanded="true" />
-                <element signature="e#1332#1333#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/OrderDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientOrder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pojo/ClientOrder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#376#377#0" expanded="true" />
-                <element signature="e#420#421#0" expanded="true" />
-                <element signature="e#456#457#0" expanded="true" />
-                <element signature="e#487#488#0" expanded="true" />
-                <element signature="e#515#516#0" expanded="true" />
-                <element signature="e#556#557#0" expanded="true" />
-                <element signature="e#590#591#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/DAOimplementation/ClientDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="75" column="58" lean-forward="true" selection-start-line="75" selection-start-column="58" selection-end-line="75" selection-end-column="58" />
-              <folding>
-                <marker date="1491981422447" expanded="true" signature="543:579" ph="SELECT * FRO... clients" />
-                <marker date="1491981422447" expanded="true" signature="624:728" ph="INSERT INTO clients... " />
-                <marker date="1491981422447" expanded="true" signature="773:872" ph="UPDATE clien... " />
-                <marker date="1491981422447" expanded="true" signature="917:950" ph="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConsultantServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/impl/ConsultantServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -473,10 +473,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/configuration/SecurityConfiguration.java" />
-        <option value="dbtable:/acc5d220/dac07754-dded-4945-a7cb-99e0504947d5/postgres.public.instruments" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/dac07754-dded-4945-a7cb-99e0504947d5/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/components/Instrument.java" />
         <option value="$PROJECT_DIR$/src/main/java/components/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/impl/UserServiceImpl.java" />
@@ -506,24 +502,28 @@
         <option value="$PROJECT_DIR$/src/main/java/services/impl/DepartmentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/DepartmentDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pojo/AjaxResponseBody.java" />
-        <option value="$PROJECT_DIR$/src/main/java/components/Consultant.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/ConsultantController.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/impl/ClientServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/ClientService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/consultantEdit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/components/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/ConsultantService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/ConsultantDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/impl/ConsultantServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/OrderController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/DAOimplementation/ConsultantDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/impl/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/OrderDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/DAOimplementation/ClientDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/components/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/pojo/ClientOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/DAOimplementation/OrderDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/impl/ConsultantServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ConsultantDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/DAOimplementation/ConsultantDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/components/Consultant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/ConsultantService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/clientOrder.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/pojo/OrderInstrument.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/DAOimplementation/OrderDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/components/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/OrderInstrumentDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/DAOimplementation/OrderInstrumentDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -1439,12 +1439,12 @@
       <updated>1491844933136</updated>
       <workItem from="1491844944037" duration="21160000" />
       <workItem from="1491925624711" duration="25000000" />
-      <workItem from="1491972874784" duration="8675000" />
+      <workItem from="1491972874784" duration="13766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54835000" />
+    <option name="totallyTimeSpent" value="59926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -1462,9 +1462,10 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29515758" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27363566" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.006149116" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0038431976" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1479,7 +1480,6 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33853355" sideWeight="0.49730977" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24804991" sideWeight="0.49577248" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1497,38 +1497,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/InstrumentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/InstrumentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/impl/InstrumentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="43" column="12" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/configuration/WebApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/InstrumentController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -1600,14 +1568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ClientDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1627,22 +1587,6 @@
             <marker date="1491973570203" expanded="true" signature="766:783" ph="SELECT ?,md5... " />
             <marker date="1491973570203" expanded="true" signature="885:942" ph="UPDATE users... " />
             <marker date="1491973570203" expanded="true" signature="987:1018" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/DAOimplementation/InstrumentDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-          <folding>
-            <marker date="1491945941240" expanded="true" signature="704:729" ph="SELECT * FRO... instruments" />
-            <marker date="1491945941240" expanded="true" signature="775:812" ph="SELECT * FRO... instruments" />
-            <marker date="1491945941240" expanded="true" signature="857:1010" ph="INSERT INTO instruments... " />
-            <marker date="1491945941240" expanded="true" signature="857:1015" ph="INSERT INTO instruments... " />
-            <marker date="1491945941240" expanded="true" signature="1060:1212" ph="UPDATE instr... " />
-            <marker date="1491945941240" expanded="true" signature="1257:1291" ph="DELETE FROM " />
-            <marker date="1491945941240" expanded="true" signature="1358:1454" ph="SELECT * FRO... instruments" />
           </folding>
         </state>
       </provider>
@@ -1721,14 +1665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/clientOrders.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/views/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1760,7 +1696,7 @@
         <state relative-caret-position="280">
           <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1784,7 +1720,7 @@
         <state relative-caret-position="432">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1802,7 +1738,7 @@
         <state relative-caret-position="313">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1829,7 +1765,7 @@
         <state relative-caret-position="211">
           <caret line="50" column="34" lean-forward="false" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1842,14 +1778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/components/Consultant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-368">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/views/orderEdit">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1858,68 +1786,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/components/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="e#264#265#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ConsultantDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/ConsultantService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/impl/ConsultantServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/DAOimplementation/ConsultantDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding>
-            <element signature="e#2585#2586#0" expanded="true" />
-            <element signature="e#2656#2657#0" expanded="true" />
-            <marker date="1491980157233" expanded="true" signature="785:825" ph="SELECT * FRO... consultants" />
-            <marker date="1491980157233" expanded="true" signature="870:995" ph="INSERT INTO consultants... " />
-            <marker date="1491980157233" expanded="true" signature="1040:1159" ph="UPDATE consu... " />
-            <marker date="1491980157233" expanded="true" signature="1204:1241" ph="DELETE FROM " />
-            <marker date="1491980157233" expanded="true" signature="1290:1328" ph="SELECT * FRO... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/OrderDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1945,54 +1817,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pojo/ClientOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
-            <element signature="e#456#457#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/DAOimplementation/OrderDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="146" column="1" lean-forward="false" selection-start-line="146" selection-start-column="1" selection-end-line="146" selection-end-column="1" />
-          <folding>
-            <element signature="e#4263#5457#0" expanded="true" />
-            <element signature="e#5456#5457#0" expanded="true" />
-            <marker date="1491981591189" expanded="true" signature="793:825" ph="SELECT * FRO... orders" />
-            <marker date="1491981591189" expanded="true" signature="870:974" ph="INSERT INTO orders... " />
-            <marker date="1491981591189" expanded="true" signature="1019:1122" ph="UPDATE order... " />
-            <marker date="1491981591189" expanded="true" signature="1167:1196" ph="DELETE FROM " />
-            <marker date="1491981591189" expanded="true" signature="1260:1286" ph="SELECT * FRO... ORDERS" />
-            <marker date="1491981591189" expanded="true" signature="1260:1295" ph="SELECT * FRO... orders" />
-            <marker date="1491981591189" expanded="true" signature="1260:1320" ph="SELECT * FRO... orders" />
-            <marker date="1491981591189" expanded="true" signature="1388:1452" ph="SELECT * FRO... orders" />
-            <marker date="1491981591189" expanded="true" signature="1513:1538" ph="SELECT * FRO... orders" />
-            <marker date="1491981591189" expanded="true" signature="1513:1596" ph="SELECT * FRO... orders" />
-            <marker date="1491981591189" expanded="true" signature="1825:1872" ph="UPDATE order... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/impl/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1278#1279#0" expanded="true" />
-            <element signature="e#1332#1333#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1278#1279#0" expanded="false" />
+            <element signature="e#1332#1333#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2007,11 +1839,201 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/DAOimplementation/ConsultantDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <marker date="1491982125293" expanded="true" signature="785:825" ph="SELECT * FRO... consultants" />
+            <marker date="1491982125293" expanded="true" signature="870:995" ph="INSERT INTO consultants... " />
+            <marker date="1491982125293" expanded="true" signature="1040:1159" ph="UPDATE consu... " />
+            <marker date="1491982125293" expanded="true" signature="1204:1241" ph="DELETE FROM " />
+            <marker date="1491982125293" expanded="true" signature="1290:1328" ph="SELECT * FRO... " />
+            <marker date="1491982125293" expanded="true" signature="1382:1404" ph="SELECT FROM consultant... " />
+            <marker date="1491982125293" expanded="true" signature="1382:1472" ph="SELECT FROM consultant... " />
+            <marker date="1491982125293" expanded="true" signature="1425:1444" ph="SELECT o.con... " />
+            <marker date="1491982125293" expanded="true" signature="1425:1456" ph="SELECT o.con... orders" />
+            <marker date="1491982125293" expanded="true" signature="1425:1471" ph="SELECT o.con... orders" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/components/Consultant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-601">
+          <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding>
+            <element signature="e#494#495#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ClientDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ConsultantDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/impl/ConsultantServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1205#1206#0" expanded="true" />
+            <element signature="e#1263#1264#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/ConsultantService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="62" column="33" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+        <state relative-caret-position="157">
+          <caret line="57" column="55" lean-forward="false" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/clientOrders.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/clientOrder.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding>
+            <element signature="e#325#345#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pojo/OrderInstrument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/DAOimplementation/OrderDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="110" column="0" lean-forward="false" selection-start-line="102" selection-start-column="12" selection-end-line="110" selection-end-column="0" />
+          <folding>
+            <element signature="e#3473#4155#0" expanded="true" />
+            <element signature="e#4154#4155#0" expanded="true" />
+            <marker date="1491985257433" expanded="true" signature="793:825" ph="SELECT * FRO... orders" />
+            <marker date="1491985257433" expanded="true" signature="870:974" ph="INSERT INTO orders... " />
+            <marker date="1491985257433" expanded="true" signature="1019:1122" ph="UPDATE order... " />
+            <marker date="1491985257433" expanded="true" signature="1167:1196" ph="DELETE FROM " />
+            <marker date="1491985257433" expanded="true" signature="1260:1286" ph="SELECT * FRO... ORDERS" />
+            <marker date="1491985257433" expanded="true" signature="1260:1295" ph="SELECT * FRO... orders" />
+            <marker date="1491985257433" expanded="true" signature="1260:1320" ph="SELECT * FRO... orders" />
+            <marker date="1491985257433" expanded="true" signature="1388:1452" ph="SELECT * FRO... orders" />
+            <marker date="1491985257433" expanded="true" signature="1513:1538" ph="SELECT * FRO... orders" />
+            <marker date="1491985257433" expanded="true" signature="1513:1596" ph="SELECT * FRO... orders" />
+            <marker date="1491985257433" expanded="true" signature="1825:1872" ph="UPDATE order... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/components/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1449">
+          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding>
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/DAOimplementation/InstrumentDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="100" column="73" lean-forward="false" selection-start-line="89" selection-start-column="10" selection-end-line="100" selection-end-column="73" />
+          <folding>
+            <marker date="1491945941240" expanded="true" signature="704:729" ph="SELECT * FRO... instruments" />
+            <marker date="1491945941240" expanded="true" signature="775:812" ph="SELECT * FRO... instruments" />
+            <marker date="1491945941240" expanded="true" signature="857:1010" ph="INSERT INTO instruments... " />
+            <marker date="1491945941240" expanded="true" signature="857:1015" ph="INSERT INTO instruments... " />
+            <marker date="1491945941240" expanded="true" signature="1060:1212" ph="UPDATE instr... " />
+            <marker date="1491945941240" expanded="true" signature="1257:1291" ph="DELETE FROM " />
+            <marker date="1491945941240" expanded="true" signature="1358:1454" ph="SELECT * FRO... instruments" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/DAOimplementation/OrderInstrumentDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="40" column="99" lean-forward="false" selection-start-line="40" selection-start-column="99" selection-end-line="40" selection-end-column="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2426#4041#0" expanded="true" />
+            <element signature="e#4040#4041#0" expanded="true" />
+            <marker date="1491987120488" expanded="true" signature="783:881" ph="INSERT INTO order_instruments... " />
+            <marker date="1491987120488" expanded="true" signature="1271:1401" ph="SELECT * FRO... order_instruments" />
+            <marker date="1491987120488" expanded="true" signature="1459:1511" ph="SELECT * FRO... order_instruments" />
+            <marker date="1491987120488" expanded="true" signature="1574:1625" ph="SELECT * FRO... order_instruments" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/OrderInstrumentDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pojo/ClientOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#456#457#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -23,6 +23,16 @@ public class Consultant  {
     private String birth_date;
     private String telephone_number;
 
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    private String login ;
+
 
 
 

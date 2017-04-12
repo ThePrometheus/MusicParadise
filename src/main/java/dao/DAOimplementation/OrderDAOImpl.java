@@ -39,9 +39,7 @@ public class OrderDAOImpl implements OrderDAO {
     private static final String EXECUTED_ORDER = "UPDATE orders SET shipped_time=now() WHERE id=?";
 
 
-    public void executedOrder(Order order) {
 
-    }
 
 
     public Order get(int id) {

@@ -16,4 +16,5 @@ public interface ConsultantDAO {
     void update(Consultant consultant);
     void delete(Consultant consultant);
     Consultant getById(int id);
+    Consultant getConsultantByOrderId(int id);
 }
