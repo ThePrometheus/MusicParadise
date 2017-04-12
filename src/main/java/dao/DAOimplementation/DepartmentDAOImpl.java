@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * Created by nazar on 11.04.17.
@@ -24,6 +25,12 @@ public class DepartmentDAOImpl implements DepartmentDAO {
     private static final String INSERT = "INSERT INTO departments (address) VALUES (?)";
     private static final String UPDATE = "UPDATE departmens SET address =? WHERE id=?";
     private static final String DELETE = "DELETE FROM departments WHERE id=?";
+    private static final  String GET_ALL = "SELECT  * FROM departments ORDER_BY address ASC";
+
+    public List<Department> getAll(){
+        return jdbcTemplate.query(GET_ALL,mapper);
+
+    }
 
 
     public Department get(int id) {

@@ -22,10 +22,12 @@ public class ClientServiceImpl  implements ClientService{
 
     private static Logger logger = LoggerFactory.getLogger(ClientServiceImpl.class.getSimpleName());
 
-    public Client get(int id) {
+    public Client get(String login) {
        logger.info("Gettting client by id");
-       return clientDao.get(id);
+       return clientDao.get(login );
     }
+
+
 
     public int insert(Client client) {
         logger.info("Insert client");

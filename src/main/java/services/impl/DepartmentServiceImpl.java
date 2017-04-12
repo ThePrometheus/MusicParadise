@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import services.DepartmentService;
 
+import java.util.List;
+
 /**
  * Created by nazar on 11.04.17.
  */
@@ -23,6 +25,10 @@ public class DepartmentServiceImpl implements DepartmentService {
     public int insert(Department department) {
         logger.info("Insert department");
         return departmentDAO.insert(department);
+    }
+    public List<Department> getAll(){
+        return departmentDAO.getAll();
+
     }
 
     public void update(Department department) {

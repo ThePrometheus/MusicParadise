@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>MusicParadise</title>
-    <script type="text/javascript" src="<c:url value="../jquery.min.js"/> "></script>
+    <script type="text/javascript" src="<c:url value="../jquery/jquery.min.js"/> "></script>
     <link rel="stylesheet" href="<c:url value="../jquery/jquery.min.js"/> ">
     <link rel="stylesheet" href="<c:url value="../bootstrap/css/bootstrap.min.css"/> ">
     <link rel="stylesheet"

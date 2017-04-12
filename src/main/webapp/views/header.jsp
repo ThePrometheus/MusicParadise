@@ -24,8 +24,10 @@
                                   class="pull-right hidden-xs showopacity glyphicon glyphicon-pencil"></span></a>
                         <ul class="dropdown-menu forAnimate" role="menu">
                             <li><a href="/dept/create">Department</a></li>
-                            <li><a href="/car/create">Car</a></li>
-                            <li><a href="/worker/create">Worker</a></li>
+                            <li><a href="/instrument/create">Instrument</a></li>
+                            <li><a href="/consultant/create">Consultant</a></li>
+
+
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -34,14 +36,16 @@
                             <span style="font-size:16px;"
                                   class="pull-right hidden-xs showopacity glyphicon glyphicon-stats"></span></a>
                         <ul class="dropdown-menu forAnimate" role="menu">
-                            <li><a href="/stats/cars">Cars</a></li>
-                            <li><a href="/stats/veterans">Veterans</a></li>
+                            <li><a href="/stats/orders">Orders</a></li>
+                            <li><a href="/stats/instruments">Instruments</a></li>
+                            <li><a href="/stats/consultants">Consultants</a></li>
+
                         </ul>
                     </li>
                 </sec:authorize>
                 <%--client menu--%>
                 <sec:authorize access="hasRole('CLIENT')">
-                    <li><a href="/order/create">Order a cab<span style="font-size:16px;"
+                    <li><a href="/order/create">Choose your instrument <span style="font-size:16px;"
                                                                  class="pull-right hidden-xs showopacity glyphicon glyphicon-plus"></span></a>
                     </li>
                     <li><a href="/client/all_orders">My orders<span style="font-size:16px;"
@@ -52,23 +56,23 @@
                                 class="caret"></span>
                             <span style="font-size:16px;"
                                   class="pull-right hidden-xs showopacity glyphicon glyphicon-stats"></span></a>
-                        <ul class="dropdown-menu forAnimate" role="menu">
+                      <%-- <ul class="dropdown-menu forAnimate" role="menu">
                             <li><a href="/stats/cars">Cars</a></li>
                             <li><a href="/stats/veterans">Veterans</a></li>
-                        </ul>
+                        </ul>  --%>
                     </li>
                 </sec:authorize>
-                <sec:authorize access="hasRole('DISPATCHER')">
-                    <li><a href="/staff/dispatcher/car_drivers">Manage cabs<span style="font-size:16px;"
+                <sec:authorize access="hasRole('CONSULTANT')">
+                    <li><a href="/consultant/orders_to_affirm">Manage corders<span style="font-size:16px;"
                                                                                  class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a>
                     </li>
-                    <li><a href="/staff/dispatcher/orders_awaiting">Manage orders<span style="font-size:16px;"
+                    <%--<li><a href="/staff/dispatcher/orders_awaiting">Manage orders<span style="font-size:16px;"
                                                                                        class="pull-right hidden-xs showopacity glyphicon glyphicon-list-alt"></span></a>
-                    </li>
-                    <li><a href="/staff/dispatcher/all_orders">My orders<span style="font-size:16px;"
+                    </li> --%>
+                    <li><a href="/consultant/all_orders">ALl given orders <span style="font-size:16px;"
                                                                               class="pull-right hidden-xs showopacity glyphicon glyphicon-list"></span></a>
                     </li>
-                    <li class="dropdown">
+                   <%-- <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Interesting<span
                                 class="caret"></span>
                             <span style="font-size:16px;"
@@ -77,26 +81,9 @@
                             <li><a href="/stats/cars">Cars</a></li>
                             <li><a href="/stats/veterans">Veterans</a></li>
                         </ul>
-                    </li>
+                    </li> --%>
                 </sec:authorize>
-                <sec:authorize access="hasRole('DRIVER')">
-                    <li><a href="/staff/driver/current_order">Current order<span style="font-size:16px;"
-                                                                                 class="pull-right hidden-xs showopacity glyphicon glyphicon-map-marker"></span></a>
-                    </li>
-                    <li><a href="/staff/driver/all_orders">My orders<span style="font-size:16px;"
-                                                                          class="pull-right hidden-xs showopacity glyphicon glyphicon-list"></span></a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Interesting<span
-                                class="caret"></span>
-                            <span style="font-size:16px;"
-                                  class="pull-right hidden-xs showopacity glyphicon glyphicon-stats"></span></a>
-                        <ul class="dropdown-menu forAnimate" role="menu">
-                            <li><a href="/stats/orders">Orders</a></li>
-                            <li><a href="/stats/consultants">Consultants</a></li>
-                        </ul>
-                    </li>
-                </sec:authorize>
+
             </ul>
         </div>
     </div>

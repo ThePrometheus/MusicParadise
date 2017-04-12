@@ -2,6 +2,8 @@ package services;
 
 import components.Department;
 
+import java.util.List;
+
 /**
  * Created by nazar on 11.04.17.
  */
@@ -10,5 +12,6 @@ public interface DepartmentService {
     int insert(Department department);
     void update(Department department );
     void remove(Department department );
+    public List<Department> getAll();
 
 }

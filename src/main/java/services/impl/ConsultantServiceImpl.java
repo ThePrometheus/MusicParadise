@@ -15,9 +15,9 @@ public class ConsultantServiceImpl implements ConsultantService {
     private ConsultantDAO consultantDAO;
     private static Logger logger = LoggerFactory.getLogger(ConsultantServiceImpl.class.getSimpleName());
 
-    public Consultant get(int id) {
+    public Consultant get(String login) {
         logger.info("Gettting consultant by id");
-        return consultantDAO.get(id);
+        return consultantDAO.get(login);
     }
 
     public int insert(Consultant client) {
