@@ -1,6 +1,5 @@
 package configuration;
 
-import configuration.App;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -14,13 +13,13 @@ import javax.servlet.ServletRegistration;
  * Created by nazar on 10.04.17.
  *
  */
-public class StartUp  implements WebApplicationInitializer{
+public class AppInit implements WebApplicationInitializer{
     private static final String DISPATCHER_SERVLET_NAME = "dispatcher";
     private static final String ROOT_MAPPING_VALUE = "/";
 
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.register(App.class);
+        context.register(WebApp.class);
         servletContext.addListener(new ContextLoaderListener());
         context.setServletContext(servletContext);
         DispatcherServlet dispatcherServlet = new DispatcherServlet(context);

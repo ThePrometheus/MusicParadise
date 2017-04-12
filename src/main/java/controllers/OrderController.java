@@ -28,11 +28,6 @@ public class OrderController {
     private UserService userService;
 
 
-    @RequestMapping(value = "/register", method = RequestMethod.POST)
-    @Transactional
-    public ModelAndView register(){
-
-    }
 
 
 }

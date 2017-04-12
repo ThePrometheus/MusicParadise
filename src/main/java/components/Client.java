@@ -5,6 +5,52 @@ package components;
  */
 public class Client  {
 
+    public Client(String login) {
+        this.login = login;
+    }
+    public String getPassword() {
+        return password;
+    }
+
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    private String password;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    private String role;
+
+    public Client(String login,  String surname, String middlename, String firstname, String tel_number, String address, String email) {
+        this.login = login;
+
+        this.surname = surname;
+        this.middlename = middlename;
+        this.firstname = firstname;
+        this.tel_number = tel_number;
+        this.address = address;
+        this.email = email;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    private String login ;
+
+
     public void setId(int id) {
         this.id = id;
     }

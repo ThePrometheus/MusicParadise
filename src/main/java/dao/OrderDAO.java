@@ -1,6 +1,7 @@
 package dao;
 
 import components.Client;
+import components.Consultant;
 import components.Order;
 
 import java.util.List;
@@ -14,6 +15,8 @@ public interface OrderDAO {
     void delete(Order order );
     void update( Order order);
     List<Order> getAllForClient(Client client);
+     void executeOrder(Order order);
+     List<Order> getAllOrdersForConsultant(Consultant consultant);
 
 
 }

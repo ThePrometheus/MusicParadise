@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,6 +18,7 @@ import java.util.List;
 /**
  * Created by nazar on 11.04.17.
  */
+@Repository
 public class OrderDAOImpl implements OrderDAO {
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -26,16 +28,17 @@ public class OrderDAOImpl implements OrderDAO {
     private static final String UPDATE = "UPDATE orders  SET onsultant=?,client=?,shipped=?,order_time=?,ship_time=?,comment=?,price=? WHERE id=?";
     private static final String DELETE = "DELETE FROM orders WHERE id=?";
     private static final String GET_ALL_ORDERS_FOR_CLIENT = "SELECT * FROM orders WHERE client=? ORDER BY order_time DESC";
-    private static final String GET_ALL_ORDERS_FOR_CONSULTANT = "SELECT * FROM orders WHERE consultant=? ORDER BY order_time DESC";
+    private  static final String GET_ALL_ORDERS_FOR_CONSULTANT = "SELECT * FROM orders WHERE consultant=? ORDER BY order_time DESC";
+
+    public List<Order> getAllOrdersForConsultant(Consultant consultant){
+        return   jdbcTemplate.query(GET_ALL_ORDERS_FOR_CONSULTANT,mapper,consultant.getId());
+    }
     private static final String EXECUTED_ORDER = "UPDATE orders SET shipped_time=now() WHERE id=?";
 
 
-    public List<Order> getAllOrdersForConsultant(Consultant consultant){
-      return   jdbcTemplate.query(GET_ALL_ORDERS_FOR_CONSULTANT,mapper,consultant.getId());
-    }
+
 
     public void executedOrder(Order order){
-        jdbcTemplate.query(EXECUTED_ORDER,mapper,order.getId());
 
     }
 
@@ -83,6 +86,11 @@ public class OrderDAOImpl implements OrderDAO {
 
     public List<Order> getAllForClient(Client client) {
       return   jdbcTemplate.query(GET_ALL_ORDERS_FOR_CLIENT,mapper,client.getId());
+    }
+
+    public void executeOrder(Order order) {
+        jdbcTemplate.query(EXECUTED_ORDER,mapper,order.getId());
+
     }
 
     private RowMapper<Order> mapper = new RowMapper<Order>(){

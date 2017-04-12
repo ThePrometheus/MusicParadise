@@ -19,14 +19,14 @@ public class UserDAOIMpl implements UserDAO {
     @Autowired
     private JdbcTemplate jdbcTemplate;
     private Logger logger = LoggerFactory.getLogger(UserDAOIMpl.class.getSimpleName());
-    private static final String  GET = "SELECT  * FROM users WHERE id=?";
-    private static final String INSERT = "INSERT INTO users(login,password,role) VALUES (?,?,?)";
-    private static final String UPDATE = "UPDATE users  SET login=?,password=?,role=? WHERE id=?";
-    private static final String DELETE = "DELETE FROM users WHERE id=?";
+    private static final String  GET = "SELECT  * FROM users WHERE login=?";
+    private static final String INSERT = "INSERT INTO users(login,password,role) SELECT ?,md5(?),? WHERE NOT EXISTS (SELECT login FROM users WHERE login=?)";
+    private static final String UPDATE = "UPDATE users  SET login=?,password=?,role=? WHERE login=?";
+    private static final String DELETE = "DELETE FROM users WHERE login=?";
 
 
-    public User get(int id) {
-        return jdbcTemplate.queryForObject(GET,mapper,id);
+    public User get(String login) {
+        return jdbcTemplate.queryForObject(GET,mapper,login);
     }
 
     public int insert(User user) {

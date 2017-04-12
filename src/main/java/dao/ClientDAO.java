@@ -8,7 +8,7 @@ import components.Client;
  */
 public interface ClientDAO {
 
-    Client get(int id);
+    Client get(String login );
     int insert(Client client);
     void update(Client client);
     void delete(Client client);

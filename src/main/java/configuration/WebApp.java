@@ -36,7 +36,7 @@ import javax.sql.DataSource;
 @EnableCaching
 @EnableWebMvc
 @EnableWebSecurity
-public class App extends  WebMvcConfigurerAdapter
+public class WebApp extends  WebMvcConfigurerAdapter
 {
     @Autowired
     private Environment environment;

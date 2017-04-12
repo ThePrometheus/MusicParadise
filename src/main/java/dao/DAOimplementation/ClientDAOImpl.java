@@ -18,21 +18,22 @@ import java.sql.SQLException;
 public class ClientDAOImpl implements ClientDAO {
     @Autowired
     private JdbcTemplate jdbcTemplate;
-    private static final String GET = "SELECT  * FROM clients WHERE id=?";
-    private static final String INSERT = "INSERT INTO clients (id,surname,firstname,middlename,tel_number,address,email) VALUES (?,?,?,?,?,?,?)";
-    private static final String UPDATE = "UPDATE clients SET surname=?,firstname=?,middlename=?,tel_number=?,address=?,email=? WHERE id=?";
-    private static final String DELETE = "DELETE FROM clients WHERE id=?";
+    private static final String GET = "SELECT  * FROM clients WHERE login=?";
+    private static final String INSERT = "INSERT INTO clients (login,surname,firstname,middlename,tel_number,address,email) VALUES (?,?,?,?,?,?,?)";
+    private static final String UPDATE = "UPDATE clients SET  surname=?,firstname=?,middlename=?,tel_number=?,address=?,email=? WHERE login=?";
+    private static final String DELETE = "DELETE FROM clients WHERE login=?";
 
     private static Logger logger = LoggerFactory.getLogger(ClientDAOImpl.class.getSimpleName());
 
-    public Client get(int id) {
+    public Client get(String login ) {
         logger.info("Client retrieved");
-        return jdbcTemplate.queryForObject(GET,mapper,id);
+        return jdbcTemplate.queryForObject(GET,mapper,login );
     }
 
     public int insert(Client client) {
             logger.info("Client inserted");
            return jdbcTemplate.update(INSERT,
+                   client.getLogin(),
                    client.getSurname(),
                    client.getFirstname(),
                    client.getMiddlename(),
@@ -57,7 +58,7 @@ public class ClientDAOImpl implements ClientDAO {
 
     public void delete(Client client) {
         logger.info("Client is  deleted");
-        jdbcTemplate.update(DELETE, client.getId());
+        jdbcTemplate.update(DELETE, client.getLogin());
 
     }
 
@@ -66,6 +67,7 @@ public class ClientDAOImpl implements ClientDAO {
         public Client mapRow(ResultSet resultSet, int i) throws SQLException {
             Client client = new Client();
             client.setId(resultSet.getInt("id"));
+            client.setLogin(resultSet.getString("login"));
             client.setSurname(resultSet.getString("surname"));
             client.setFirstname(resultSet.getString("firstname"));
             client.setMiddlename(resultSet.getString("middlename"));
