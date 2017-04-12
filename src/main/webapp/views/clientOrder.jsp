@@ -23,28 +23,26 @@
 
             <div class="col-xs-12 align-items-center vcenter"><strong>Instrument: </strong>
                 <c:choose>
-                    <c:when test="${not empty order_instrument}">
-                        ${order_instrument.instrument.model} ${order_instrument.instrument.category} ${order_instrument.instrument.price}
+                    <c:when test="${not empty order_instrument_list}">
+                        <c:forEach items="${order_instrument_list}" var="order_instrument">
+                            ${order_instrument.instrument.model}<br>
+                            ${order_instrument.instrument.category}<br>
+                            ${order_instrument.instrument.price}<br>
+                        </c:forEach>
+
                     </c:when>
                     <c:otherwise>
                         n/a
                     </c:otherwise>
                 </c:choose>
             </div>
-            <div class="col-xs-12 align-items-center vcenter"><strong>Driver: </strong>
+
+            <div class="col-xs-12 align-items-center vcenter"><strong>Consultant: </strong>
                 <c:choose>
-                    <c:when test="${not empty car_driver}">
-                        ${car_driver.driver.fullName}
-                    </c:when>
-                    <c:otherwise>
-                        n/a
-                    </c:otherwise>
-                </c:choose>
-            </div>
-            <div class="col-xs-12 align-items-center vcenter"><strong>Dispatcher: </strong>
-                <c:choose>
-                    <c:when test="${not empty dispatcher}">
-                        ${dispatcher.fullName}
+                    <c:when test="${not empty consultant}">
+                        ${consultant.surname}<br>
+                        ${consultant.firstname}<br>
+
                     </c:when>
                     <c:otherwise>
                         n/a
@@ -52,13 +50,7 @@
                 </c:choose>
             </div>
         </div>
-        <script>
-            var FROM_LAT = ${client_order.order.from.lat};
-            var FROM_LNG = ${client_order.order.from.lng};
-            var TO_LAT = ${client_order.order.to.lat};
-            var TO_LNG = ${client_order.order.to.lng};
-            var RATE_MARK = ${client_order.order.feedback};
-        </script>
+        <%--
         <form id="ratingsForm">
             <div class="stars">
                 <input type="radio" name="star" class="star-1" rate="1" id="star-1"
@@ -85,11 +77,11 @@
             >Rate!
             </div>
         </sec:authorize>
+        --%>
     </div>
 </div>
 
-<link rel="stylesheet" href="<c:url value="/presentation/resources/css/stars.css"/>"/>
-<script src="https://maps.googleapis.com/maps/api/js?language=en&key=${gApiKey}&signed_in=true&callback=runMap"
-        async defer></script>
-<script type="text/javascript" src="<c:url value="/presentation/resources/js/dynamicMapDirections.js"/>"></script>
+<link rel="stylesheet" href="<c:url value="../css/stars.css"/>"/>
+
+
 <%@include file="footer.jsp" %>

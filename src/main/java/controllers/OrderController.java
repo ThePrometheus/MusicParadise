@@ -16,6 +16,7 @@ import services.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 import java.security.Principal;
+import java.util.List;
 
 /**
  * Created by nazar on 11.04.17.
@@ -34,6 +35,8 @@ public class OrderController {
 
     @Autowired
     private ConsultantService consultantService;
+    @Autowired
+    private OrderInstrumentService orderInstrumentService;
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public ModelAndView createOrder() {
@@ -59,10 +62,10 @@ public class OrderController {
         ModelAndView mv = new ModelAndView("clientOrder");
 
           ClientOrder clientOrder = orderService.getClientOrderById(id);
-          List<OrderInstrument> orderInstruments= OrderInstrumentService.getByOrderId(id);
+          List<OrderInstrument> orderInstruments= orderInstrumentService.getByOrderId(id);
         Consultant consultant= consultantService.getByOrderId(id);
         System.out.println(clientOrder);
-
+        System.out.println(orderInstruments);
         System.out.println(consultant);
         if (!clientOrder.getClient().getLogin().equals(principal.getName())
 
@@ -70,6 +73,7 @@ public class OrderController {
                 && !request.isUserInRole(ADMIN_ROLE))
             return new ModelAndView("403");
         mv.addObject("client_order", clientOrder);
+        mv.addObject("order_instrument_list",orderInstruments);
 
         mv.addObject("consultant", consultant);
         return mv;
