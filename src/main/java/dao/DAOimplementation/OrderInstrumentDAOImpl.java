@@ -25,9 +25,9 @@ public class  OrderInstrumentDAOImpl implements OrderInstrumentDAO {
 
     private static  final String CREATE="INSERT INTO order_instruments(order_id,instrument_id,consultant_login,enabled) VALUES(?,?,?,FALSE)";
     private static final  String REMOVE="DELETE * FROM order_instruments WHERE order_id=? AND  instrument_id=?";
-    private  static  final String GET_BY_ORDER_ID = "SELECT * FROM order_instruments oi INNER JOIN instruments i ON  oi.instrument_id = i.id AND i.department=(SELECT department FROM consultants WHERE login=?)";
-    private  static  final String GET_WAITING_BY_DEPARTMENT = "SELECT * FROM order_instruments oi INNER JOIN instruments i ON  oi.instrument_id = i.id WHERE  i.department=? AND oi.enabled=FALSE";
+        private  static  final String GET_WAITING_BY_DEPARTMENT = "SELECT * FROM order_instruments oi INNER JOIN instruments i ON  oi.instrument_id = i.id WHERE  i.department=? AND oi.enabled=FALSE";
     private static final String GET_BY_INSTRUMENT_ID= "SELECT * FROM order_instruments WHERE instrument_id?";
+    private static     final String GET_BY_ORDER_ID= "SELECT * FROM order_instrument WHERE order_id=?";
     private  static  final  String GET_WAITING_FOR_ACCEPT= "SELECT * FROM order_instruments WHERE enabled=FALSE";
     public int createOrderInstrument(Order order, Instrument instrument,Consultant consultant) throws Exception {
       return   jdbcTemplate.update(CREATE,mapper,order.getId(),instrument.getId(),consultant.getLogin());
@@ -45,6 +45,11 @@ public class  OrderInstrumentDAOImpl implements OrderInstrumentDAO {
         return jdbcTemplate.queryForObject(GET_BY_INSTRUMENT_ID,mapper,id);
 
     }
+
+    public List<OrderInstrument> getByOrderId(int id) {
+        return jdbcTemplate.query(GET_BY_ORDER_ID,mapper,id);
+    }
+
     private RowMapper<OrderInstrument> mapper = new RowMapper<OrderInstrument>() {
 
         public OrderInstrument mapRow(ResultSet resultSet, int i) throws SQLException {

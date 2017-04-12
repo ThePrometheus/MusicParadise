@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import pojo.AjaxResponseBody;
 import pojo.ClientOrder;
+import pojo.OrderInstrument;
 import services.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -58,7 +59,7 @@ public class OrderController {
         ModelAndView mv = new ModelAndView("clientOrder");
 
           ClientOrder clientOrder = orderService.getClientOrderById(id);
-        //  CarDriver carDriver = carDriverService.getByOrderId(id);
+          List<OrderInstrument> orderInstruments= OrderInstrumentService.getByOrderId(id);
         Consultant consultant= consultantService.getByOrderId(id);
         System.out.println(clientOrder);
 

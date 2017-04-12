@@ -23,8 +23,8 @@
 
             <div class="col-xs-12 align-items-center vcenter"><strong>Instrument: </strong>
                 <c:choose>
-                    <c:when test="${not empty instrument_list}">
-                        ${car_driver.car.brand} ${car_driver.car.model} ${car_driver.car.sign}
+                    <c:when test="${not empty order_instrument}">
+                        ${order_instrument.instrument.model} ${order_instrument.instrument.category} ${order_instrument.instrument.price}
                     </c:when>
                     <c:otherwise>
                         n/a
