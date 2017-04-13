@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<title>Hello</title>
-
-<br>Home directory</br>
+<br>
+<div class="text-center">
+    <h1 >MusicParadise</h1>
+    <h2>AIS PROJECT by Nazar Tkach</h2>
+</div>

@@ -16,9 +16,9 @@ public class UserServiceImpl  implements UserService{
     @Autowired
     private UserDAO userDAO;
     private static Logger logger = LoggerFactory.getLogger(UserServiceImpl.class.getSimpleName());
-    public User get(int id) {
+    public User get(String login) {
         logger.info("Gettting user by id");
-        return userDAO.get(id);
+        return userDAO.get(login);
     }
 
     public int insert(User user) {

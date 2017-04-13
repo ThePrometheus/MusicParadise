@@ -1,6 +1,7 @@
 package services.impl;
 
 import components.Client;
+import components.Consultant;
 import components.Order;
 import dao.InstrumentDAO;
 import dao.OrderDAO;
@@ -24,6 +25,10 @@ public class OrderServiceImpl implements OrderService {
     public Order get(int id) {
         logger.info("Gettting order by id");
         return orderDAO.get(id);
+    }
+
+  public   List<Order> getAllForConsultant(Consultant consultant){
+        return orderDAO.getAllOrdersForConsultant(consultant);
     }
 
     public int insert(Order order) {
@@ -51,4 +56,6 @@ public class OrderServiceImpl implements OrderService {
     public ClientOrder getClientOrderById(int id) {
      return    orderDAO.getClientOrderById(id);
     }
+
+
 }

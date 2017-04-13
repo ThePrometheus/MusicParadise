@@ -26,9 +26,9 @@ public class ConsultantDAOImpl implements ConsultantDAO {
     private static final String INSERT = "INSERT INTO consultants (login,surname,firstname,middlename,birth_date,tel_number,salary,department) VALUES (?,?,?,?,?,?,?,?)";
     private static final String UPDATE = "UPDATE consultants SET surname=?,firstname=?,middlename=?,birth_date=?,tel_number=?,salary=?,department=? WHERE login=?";
     private static final String DELETE = "DELETE FROM consultants WHERE login=?";
-    private static final  String GET_BY_ID = "SELECT  * FROTM consultants WHERE id=?";
-    private static final String GET_BY_ORDER_ID = "SELECT FROM consultant c WHERE c.login IN (SELECT o.consultant FROM orders o WHERE o.id=?) ";
-
+    private static final  String GET_BY_ID = "SELECT  * FROM consultants WHERE id=?";
+    private static final String GET_BY_ORDER_ID = "SELECT FROM consultants c WHERE c.login IN (SELECT o.consultant FROM orders o WHERE o.id=?) ";
+private static final String SUPER_CONSULTANT ="SELECT * FROM consultants c WHERE NOT EXISTS(SELECT o.id FROM orders o WHERE o.consultant=c.id AND NOT EXISTS (SELECT * FROM instruments i WHERE c.department!=i.department ))";
     public Consultant get(String login ) {
         logger.info("Conslutant retrieved");
         return jdbcTemplate.queryForObject(GET,mapper,login);
@@ -77,6 +77,7 @@ public class ConsultantDAOImpl implements ConsultantDAO {
         List<Consultant> resp = jdbcTemplate.query(GET_BY_ORDER_ID, mapper, id);
         return (resp.isEmpty())?null:resp.get(0);
     }
+
 
 
     private RowMapper<Consultant> mapper = new RowMapper<Consultant>() {

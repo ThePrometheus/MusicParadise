@@ -19,13 +19,19 @@ public class AppInit implements WebApplicationInitializer{
 
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
+        System.out.println(0);
         context.register(WebApp.class);
+        System.out.println(1);
         servletContext.addListener(new ContextLoaderListener());
+        System.out.println(2);
         context.setServletContext(servletContext);
+        System.out.println(3);
         DispatcherServlet dispatcherServlet = new DispatcherServlet(context);
+        System.out.println(4);
         dispatcherServlet.setThrowExceptionIfNoHandlerFound(true);
+        System.out.println(6);
         ServletRegistration.Dynamic dispatcher = servletContext.addServlet(DISPATCHER_SERVLET_NAME, dispatcherServlet);
-
+        System.out.println(7);
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping(ROOT_MAPPING_VALUE);
 

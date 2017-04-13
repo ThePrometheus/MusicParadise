@@ -22,16 +22,26 @@ public class  OrderInstrumentDAOImpl implements OrderInstrumentDAO {
     @Autowired
     private JdbcTemplate jdbcTemplate;
     private Logger logger = LoggerFactory.getLogger(OrderInstrumentDAOImpl.class.getSimpleName());
-
+    private static final String GET_ALL_FOR_CONSULTANT= "SELECT * FROM order_instruments WHERE consultant=?";
     private static  final String CREATE="INSERT INTO order_instruments(order_id,instrument_id,consultant_login,enabled) VALUES(?,?,?,FALSE)";
     private static final  String REMOVE="DELETE * FROM order_instruments WHERE order_id=? AND  instrument_id=?";
         private  static  final String GET_WAITING_BY_DEPARTMENT = "SELECT * FROM order_instruments oi INNER JOIN instruments i ON  oi.instrument_id = i.id WHERE  i.department=? AND oi.enabled=FALSE";
     private static final String GET_BY_INSTRUMENT_ID= "SELECT * FROM order_instruments WHERE instrument_id?";
     private static     final String GET_BY_ORDER_ID= "SELECT * FROM order_instrument WHERE order_id=?";
     private  static  final  String GET_WAITING_FOR_ACCEPT= "SELECT * FROM order_instruments WHERE enabled=FALSE";
+    private static final String ENABLE =  "UPDATE order_instrument SET enabled=FALSE AND consultant=? WHERE order_id=? AND instrument_id=? ";
+
     public int createOrderInstrument(Order order, Instrument instrument,Consultant consultant) throws Exception {
       return   jdbcTemplate.update(CREATE,mapper,order.getId(),instrument.getId(),consultant.getLogin());
     }
+
+    public int enable(OrderInstrument orderInstrument,Consultant consultant){
+        return jdbcTemplate.update(ENABLE,mapper,consultant.getLogin(),orderInstrument.getOrder().getId(),orderInstrument.getInstrument().getId());
+    }
+    public int decline(OrderInstrument orderInstrument,Consultant consultant){
+        return jdbcTemplate.update(ENABLE,mapper,consultant.getLogin(),orderInstrument.getOrder().getId(),orderInstrument.getInstrument().getId());
+    }
+
 
     public int removeOrderInstrument(Order order, Instrument instrument, Consultant consultant) throws Exception {
         return jdbcTemplate.update(REMOVE,order.getId(),instrument.getId());
@@ -48,6 +58,10 @@ public class  OrderInstrumentDAOImpl implements OrderInstrumentDAO {
 
     public List<OrderInstrument> getByOrderId(int id) {
         return jdbcTemplate.query(GET_BY_ORDER_ID,mapper,id);
+    }
+
+    public List<OrderInstrument> getByConsultant(Consultant consultant) {
+        return jdbcTemplate.query(GET_ALL_FOR_CONSULTANT,mapper,consultant.getLogin());
     }
 
     private RowMapper<OrderInstrument> mapper = new RowMapper<OrderInstrument>() {

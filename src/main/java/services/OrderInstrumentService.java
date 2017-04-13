@@ -16,4 +16,7 @@ public interface  OrderInstrumentService {
     List<OrderInstrument> getWaitingForAccept(Consultant consultant);
     OrderInstrument getByInstrumentId(int id);
     List<OrderInstrument>getByOrderId(int id);
+    List<OrderInstrument> getByConsultant(Consultant consultant);
+    int enable(OrderInstrument orderInstrument,Consultant consultant);
+    int decline(OrderInstrument orderInstrument,Consultant consultant);
 }

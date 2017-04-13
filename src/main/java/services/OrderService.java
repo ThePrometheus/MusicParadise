@@ -1,6 +1,7 @@
 package services;
 
 import components.Client;
+import components.Consultant;
 import components.Order;
 import pojo.ClientOrder;
 
@@ -16,4 +17,6 @@ public interface OrderService {
     void remove(Order order );
     List<Order> getAllForClient(Client client );
     ClientOrder getClientOrderById(int id);
+    //List<Client> getWaitingForConsultant(Consultant consultant);
+    List<Order> getAllForConsultant(Consultant consultant);
 }

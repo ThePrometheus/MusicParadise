@@ -22,8 +22,8 @@ public class InstrumentDAOImpl implements InstrumentDAO {
     private Logger logger = LoggerFactory.getLogger(InstrumentDAOImpl.class.getSimpleName());
     private static final String GET_ALL = "SELECT * FROM instruments";
 
-
-
+    private static  final String QUERY_SECOND = "SELECT * FROM instruments WHERE id NOT IN (SELECT o.instrument_id FROM orders o WHERE o.order_time > '2015-03-03' AND o.shipped=FALSE AND o.comment NOTNULL ";
+private static final  String INSTRUMENT_AMOUNT = "SELECT category,model,trademark, count(DISTINCT id)AS amount  FROM instruments WHERE instruments.id=(SELECT instrument_id FROM orders WHERE (price > 100)) GROUP BY model,category,trademark";
     private static final String  GET = "SELECT  * FROM instruments WHERE id=?";
     private static final String INSERT = "INSERT INTO instruments (model,category,trademark,company_index,purchase_date,sell_date,functioning,department,price,description) VALUES (?,?,?,?,?,?,?,?,?,?)";
     private static final String UPDATE = "UPDATE instruments SET model=?,category=?,trademark=?,company_index=?,purchase_date=?,sell_date=?,functioning=?,department,price,description WHERE  id=?";

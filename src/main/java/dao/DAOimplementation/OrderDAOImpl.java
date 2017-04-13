@@ -30,10 +30,16 @@ public class OrderDAOImpl implements OrderDAO {
     private static final String DELETE = "DELETE FROM orders WHERE id=?";
     private static final String GET_ALL_ORDERS_FOR_CLIENT = "SELECT * FROM orders WHERE client=? ORDER BY order_time DESC";
     private static final String GET_ALL_ORDERS_FOR_CONSULTANT = "SELECT * FROM orders WHERE consultant=? ORDER BY order_time DESC";
-    private static final String GET_CLIENT_ORDER_BY_ID = "SELECT * FROM \"orders\" o INNER JOIN client c ON client.login=c.login WHERE o.id=?";
+    private static final String GET_CLIENT_ORDER_BY_ID = "SELECT * FROM \"orders\" o INNER JOIN clients c ON clients.login=c.login WHERE o.id=?";
+//private static  final String GET_WAITING_FOR_CONSULTANT = "SELECT * FROM orders o  INNER JOIN  client c ON o.client=c.login AND  "
+    private  static final String GET_ORDER_ID_NOT_SHIPPED_BY_LOGIN="SELECT orders.id FROM orders INNER JOIN instruments  ON  orders.instrument_id = instruments.id  WHERE  instruments.department=(SELECT department_id FROM departments WHERE departments.department_id=(SELECT department FROM consultants WHERE consultants.login='CLIENT1') ) AND orders.shipped=FALSE";
 
+    private List<Order> getOrderIdByLogin(Consultant consultant){
+        return jdbcTemplate.query(GET_ORDER_ID_NOT_SHIPPED_BY_LOGIN,mapper,consultant.getLogin());
+
+    }
     public List<Order> getAllOrdersForConsultant(Consultant consultant) {
-        return jdbcTemplate.query(GET_ALL_ORDERS_FOR_CONSULTANT, mapper, consultant.getId());
+        return jdbcTemplate.query(GET_ALL_ORDERS_FOR_CONSULTANT, mapper, consultant.getDepartment_id());
     }
 
     private static final String EXECUTED_ORDER = "UPDATE orders SET shipped_time=now() WHERE id=?";
@@ -94,6 +100,8 @@ public class OrderDAOImpl implements OrderDAO {
         List<ClientOrder> resp = jdbcTemplate.query(GET_CLIENT_ORDER_BY_ID, clientOrderMapper, id);
         return (resp.isEmpty()) ? null : resp.get(0);
     }
+
+
 
 
     private RowMapper<Order> mapper = new RowMapper<Order>() {

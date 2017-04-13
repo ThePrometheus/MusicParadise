@@ -39,4 +39,15 @@ private OrderInstrumentDAO orderInstrumentDAO;
     public List<OrderInstrument> getByOrderId(int id) {
         return orderInstrumentDAO.getByOrderId(id);
     }
+
+    public List<OrderInstrument> getByConsultant(Consultant consultant) {
+        return orderInstrumentDAO.getByConsultant(consultant);
+    }
+   public  int enable(OrderInstrument orderInstrument,Consultant consultant){
+        return orderInstrumentDAO.enable(orderInstrument,consultant);
+   }
+    public  int decline(OrderInstrument orderInstrument,Consultant consultant){
+        return orderInstrumentDAO.decline(orderInstrument,consultant);
+    }
+
 }

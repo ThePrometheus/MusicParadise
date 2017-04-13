@@ -4,6 +4,10 @@ package components;
  * Created by nazar on 10.04.17.
  */
 public class Consultant  {
+    public Consultant(){}
+    public Consultant(String login) {
+        this.login = login;
+    }
 
     public int getPayment() {
         return payment;
