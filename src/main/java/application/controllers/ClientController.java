@@ -1,15 +1,16 @@
 package application.controllers;
 
 import application.components.Client;
+import application.components.Instrument;
+import application.components.User;
+import application.pojo.AjaxResponseBody;
 import application.services.ClientService;
+import application.services.OrderService;
 import application.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import application.services.OrderService;
 
 import javax.transaction.Transactional;
 import java.security.Principal;
@@ -39,19 +40,39 @@ public class ClientController {
                                        @RequestParam String tel_number,@RequestParam String address,
                                        @RequestParam  String email,
     @RequestParam  String pass,@RequestParam String  password){
-        ModelAndView modelAndView = new ModelAndView("login");
+System.out.println("Hello"+pass);
        if(pass.compareTo(password)==0) throw new IllegalArgumentException("password don't match");
         Client client = new Client(login,surname,firstname,middlename,tel_number,address,email);
-        client.setRole(CLIENT_ROLE);
+        System.out.println(client);
+       // client.setRole(CLIENT_ROLE);
+        User u = new User(login,pass,CLIENT_ROLE);
+        System.out.println(u);
         client.setPassword(password);
+        ModelAndView modelAndView = new ModelAndView("login");
         if (clientService.insert(client) > 0)
             modelAndView.addObject("registered", true);
-        else
+
+        else {
             modelAndView.addObject("registered", false);
+
+           if(userService.insert(u)>0)
+               System.err.println("Multiple users");
+        }
+
 
 return modelAndView;
 
     }
+
+    @RequestMapping(value="/create",method= RequestMethod.GET)
+    public ModelAndView createClient() {
+        ModelAndView modelAndView= new ModelAndView("/login");
+       // modelAndView.addObject("departments",departmentService.getAll());
+        modelAndView.addObject("firstEdit",true);
+        return modelAndView;
+    }
+
+
 
 
     @RequestMapping(value = "/all_orders", method = RequestMethod.GET)
@@ -66,3 +87,4 @@ return modelAndView;
 
 
 }
+

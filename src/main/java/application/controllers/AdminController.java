@@ -1,13 +1,15 @@
 package application.controllers;
 
+
 import application.components.Consultant;
+import application.pojo.AjaxResponseBody;
+import application.services.ConsultantService;
+import application.services.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import application.pojo.AjaxResponseBody;
-import application.services.ConsultantService;
-import application.services.DepartmentService;
+
 
 /**
  * Created by nazar on 11.04.17.
@@ -62,3 +64,4 @@ public class AdminController {
         return new AjaxResponseBody("200", "OK");
     }
 }
+
