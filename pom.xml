@@ -5,7 +5,7 @@
   <groupId>ua.ukma.tkach.musicparadise</groupId>
   <artifactId>musicparadise</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>MusicParadise</name>
   <url>http://maven.apache.org</url>
@@ -14,7 +14,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <spring-version>4.3.5.RELEASE</spring-version>
-      <spring-security>4.1.0.RELEASE</spring-security>
+      <spring-security>4.0.1.RELEASE</spring-security>
       <postgres-version>9.2-1003-jdbc4</postgres-version>
       <google-maps-version>0.1.17</google-maps-version>
       <jackson.version>2.6.3</jackson.version>
@@ -135,14 +135,14 @@
       <dependency>
           <groupId>org.springframework.security</groupId>
           <artifactId>spring-security-core</artifactId>
-          <version>4.1.0.RELEASE</version>
+          <version>4.0.1.RELEASE</version>
       </dependency>
 
       <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
       <dependency>
           <groupId>org.springframework.security</groupId>
           <artifactId>spring-security-web</artifactId>
-          <version>4.1.0.RELEASE</version>
+          <version>4.0.1.RELEASE</version>
       </dependency>
 
 
@@ -150,14 +150,14 @@
       <dependency>
           <groupId>org.springframework.security</groupId>
           <artifactId>spring-security-config</artifactId>
-          <version>4.1.0.RELEASE</version>
+          <version>4.0.1.RELEASE</version>
       </dependency>
 
       <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-taglibs -->
       <dependency>
           <groupId>org.springframework.security</groupId>
           <artifactId>spring-security-taglibs</artifactId>
-          <version>4.1.0.RELEASE</version>
+          <version>4.0.1.RELEASE</version>
       </dependency>
 
       <dependency>
@@ -184,4 +184,7 @@
 
 
   </dependencies>
+    <build>
+        <finalName>musicparadise</finalName>
+    </build>
 </project>
